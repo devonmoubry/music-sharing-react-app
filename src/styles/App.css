@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  display: block;
+  background-color: #fff;
+  padding: 20px;
+  color: gray;
+  text-align: left;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.playListForm {
+  text-align: left;
+  display: flex;
+  float: left;
+}
+
+li {
+  list-style: none;
+}
+
+.playList {
+  float: right;
+  text-align: left;
+}
+
+ul {
+  padding-left: 0;
+}

@@ -60,23 +60,33 @@ export default class PlayListForm extends Component {
     return (
       <div className="col playListForm">
         <form onSubmit={this.addToList}>
-          <ul>
-            <li>
-              <label htmlFor="name">User Name:</label><br/>
-              <input autoFocus type="text" className="userName" id="userName" placeholder="Name or User Name" value={this.state.userName} onChange={this.handleUserNameChange}/></li>
-            <li>
-              <label htmlFor="artist">Artist / Band:</label><br/>
-              <input type="text" className="songArtist" id="songArtist" placeholder="Artist or Band" value={this.state.songArtist} onChange={this.handleSongArtistChange}/></li>
-            <li>
-              <label htmlFor="name">Song Title:</label><br/>
-              <input type="text" className="songTitle" id="songTitle" placeholder="Song Title" value={this.state.songTitle} onChange={this.handleSongTitleChange}/></li>
-            <li>
-              <label htmlFor="name">Notes about Song:</label><br/>
-              <textarea type="" className="songNote" id="songNote" value={this.state.songNote} onChange={this.handleSongNoteChange}/></li>
-            <li>
-              <button type="submit">Submit</button>
-            </li>
-          </ul>
+            <div className="form-group row">
+              <label htmlFor="name" className="text-white col-4 col-form-label">User Name:</label>
+              <div className="col-8">
+                <input autoFocus type="text" className="userName form-control" id="userName" placeholder="Name or User Name" value={this.state.userName} onChange={this.handleUserNameChange}/>
+              </div>
+            </div>
+            <div className="form-group row">
+              <label htmlFor="artist" className="text-white col-4 col-form-label">Artist / Band:</label>
+              <div className="col-8">
+                <input type="text" className="songArtist form-control" id="songArtist" placeholder="Artist or Band" value={this.state.songArtist} onChange={this.handleSongArtistChange}/>
+              </div>
+            </div>
+            <div className="form-group row">
+              <label htmlFor="name" className="text-white col-4 col-form-label">Song Title:</label>
+              <div className="col-8">
+                <input type="text" className="songTitle form-control" id="songTitle" placeholder="Song Title" value={this.state.songTitle} onChange={this.handleSongTitleChange}/>
+              </div>
+            </div>
+            <div className="form-group row">
+              <label htmlFor="name" className="text-white col-4 col-form-label">Notes about Song:</label>
+              <div className="col-8">
+                <textarea type="" className="songNote form-control" id="songNote" value={this.state.songNote} onChange={this.handleSongNoteChange}/>
+              </div>
+            </div>
+            <div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </div>
         </form>
       </div>
     )

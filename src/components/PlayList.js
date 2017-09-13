@@ -37,7 +37,7 @@ export default class PlayList extends Component {
     });
     return (
       <div className="col playList">
-        <button onClick={this.fetchData}>Update List</button>
+        <button className="btn btn-secondary" onClick={this.fetchData}>Update List</button>
         {songs}
       </div>
     )

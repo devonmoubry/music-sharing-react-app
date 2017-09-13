@@ -2,19 +2,14 @@ import React, {Component} from 'react';
 import NavBar from './NavBar';
 import PlayList from './PlayList';
 import PlayListForm from './PlayListForm';
-import logo from '../logo.svg';
 import '../styles/App.css';
 
 class App extends Component {
   'use strict';
-  constructor() {
-    super();
-
-  }
 
   render() {
     return (
-      <div className="App">
+      <div className="App container-fluid">
         <NavBar/>
         <div className="row">
           <PlayListForm />

@@ -1,3 +1,7 @@
+body {
+  background: #00a7ff;
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +12,6 @@
 }
 
 .App-header {
-  display: block;
   background-color: #fff;
   padding: 20px;
   color: gray;
@@ -20,10 +23,11 @@
   to { transform: rotate(360deg); }
 }
 
+.navBar {
+  margin: 2em 0;
+}
 .playListForm {
   text-align: left;
-  display: flex;
-  float: left;
 }
 
 li {
@@ -31,7 +35,6 @@ li {
 }
 
 .playList {
-  float: right;
   text-align: left;
 }
 

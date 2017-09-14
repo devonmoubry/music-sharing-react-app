@@ -31,9 +31,13 @@ export default class PlayList extends Component {
   };
 
   render() {
-    let songsArray = this.state.songs;
-    let songs = songsArray.map(song => {
-      return <PlayListItem song={song} />;
+    let playListItemArray = this.state.songs;
+    let songs = playListItemArray.map(song => {
+      return (
+        <div key={song.songTitle} className="card playListItem">
+          <PlayListItem song={song} />
+        </div>
+      );
     });
     return (
       <div className="col playList">

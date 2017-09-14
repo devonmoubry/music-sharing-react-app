@@ -4,6 +4,7 @@ export default class PlayListForm extends Component {
   constructor() {
     super();
 
+    // input fields should initially render as empty
     this.state = {
       userName: "",
       songArtist: "",
@@ -12,29 +13,11 @@ export default class PlayListForm extends Component {
     };
   }
 
-  handleUserNameChange = e => {
+  handleChange = e => {
     e.preventDefault();
     console.log(e.target);
-    this.setState({ userName: e.target.value });
-  };
-
-  handleSongArtistChange = e => {
-    e.preventDefault();
-    console.log(e.target);
-    this.setState({ songArtist: e.target.value });
-  };
-
-  handleSongTitleChange = e => {
-    e.preventDefault();
-    console.log(e.target);
-    this.setState({ songTitle: e.target.value });
-  };
-
-  handleSongNoteChange = e => {
-    e.preventDefault();
-    console.log(e.target);
-    this.setState({ songNote: e.target.value });
-  };
+    this.setState({ [e.target.id]: e.target.value });
+  }
 
   addToList = e => {
     e.preventDefault();
@@ -74,7 +57,7 @@ export default class PlayListForm extends Component {
       <div className="col playListForm">
         <form onSubmit={this.addToList}>
           <div className="form-group row">
-            <label htmlFor="name" className="text-white col-4 col-form-label">
+            <label htmlFor="name" className="text-white col-5 col-form-label">
               User Name:
             </label>
             <div className="col-8">
@@ -85,12 +68,12 @@ export default class PlayListForm extends Component {
                 id="userName"
                 placeholder="Name or User Name"
                 value={this.state.userName}
-                onChange={this.handleUserNameChange}
+                onChange={this.handleChange}
               />
             </div>
           </div>
           <div className="form-group row">
-            <label htmlFor="artist" className="text-white col-4 col-form-label">
+            <label htmlFor="artist" className="text-white col-5 col-form-label">
               Artist / Band:
             </label>
             <div className="col-8">
@@ -100,12 +83,12 @@ export default class PlayListForm extends Component {
                 id="songArtist"
                 placeholder="Artist or Band"
                 value={this.state.songArtist}
-                onChange={this.handleSongArtistChange}
+                onChange={this.handleChange}
               />
             </div>
           </div>
           <div className="form-group row">
-            <label htmlFor="name" className="text-white col-4 col-form-label">
+            <label htmlFor="name" className="text-white col-5 col-form-label">
               Song Title:
             </label>
             <div className="col-8">
@@ -115,12 +98,12 @@ export default class PlayListForm extends Component {
                 id="songTitle"
                 placeholder="Song Title"
                 value={this.state.songTitle}
-                onChange={this.handleSongTitleChange}
+                onChange={this.handleChange}
               />
             </div>
           </div>
           <div className="form-group row">
-            <label htmlFor="name" className="text-white col-4 col-form-label">
+            <label htmlFor="name" className="text-white col-5 col-form-label">
               Notes about Song:
             </label>
             <div className="col-8">
@@ -129,7 +112,7 @@ export default class PlayListForm extends Component {
                 className="songNote form-control"
                 id="songNote"
                 value={this.state.songNote}
-                onChange={this.handleSongNoteChange}
+                onChange={this.handleChange}
               />
             </div>
           </div>

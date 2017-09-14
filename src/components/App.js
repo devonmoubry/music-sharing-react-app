@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
-import NavBar from './NavBar';
-import PlayList from './PlayList';
-import PlayListForm from './PlayListForm';
-import '../styles/App.css';
+import React, { Component } from "react";
+import NavBar from "./NavBar";
+import PlayList from "./PlayList";
+import PlayListForm from "./PlayListForm";
+import "../styles/App.css";
 
 class App extends Component {
-  'use strict';
+  "use strict";
 
   render() {
     return (
       <div className="App container-fluid">
-        <NavBar/>
+        <NavBar />
         <div className="row">
           <PlayListForm />
           <PlayList />

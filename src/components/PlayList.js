@@ -1,45 +1,47 @@
-import React, { Component } from 'react';
-import PlayListItem from './PlayListItem';
+import React, { Component } from "react";
+import PlayListItem from "./PlayListItem";
 export default class PlayList extends Component {
-  'use strict';
+  "use strict";
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {songs: []}
+    this.state = { songs: [] };
   }
 
   componentDidMount() {
-    fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting')
+    fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting")
       .then(results => {
         return results.json();
-      }).then(data => {
-        this.setState({songs: data});
-        console.log("state", this.state.songs);
       })
+      .then(data => {
+        this.setState({ songs: data });
+        console.log("state", this.state.songs);
+      });
   }
 
-  fetchData = (e) => {
-      e.preventDefault();
-      fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
+  fetchData = e => {
+    e.preventDefault();
+    fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting")
+      .then(results => {
         return results.json();
-      }).then(data => {
-        this.setState({songs: data});
       })
-    }
+      .then(data => {
+        this.setState({ songs: data });
+      });
+  };
 
   render() {
     let songsArray = this.state.songs;
-    let songs = songsArray.map((song) => {
-      console.log('render song dammit',song);
-      return (
-        <PlayListItem song={song}/>
-      )
+    let songs = songsArray.map(song => {
+      return <PlayListItem song={song} />;
     });
     return (
       <div className="col playList">
-        <button className="btn btn-secondary" onClick={this.fetchData}>Update List</button>
+        <button className="btn btn-secondary" onClick={this.fetchData}>
+          Update List
+        </button>
         {songs}
       </div>
-    )
+    );
   }
 }

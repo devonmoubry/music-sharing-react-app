@@ -7,7 +7,7 @@ export default class NavBar extends Component {
     return (
       <div className="row navBar App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2 className="display-3">Play What?!</h2>
+        <h1 className="display-3">Play What?!</h1>
       </div>
     );
   }

@@ -2,20 +2,14 @@ body {
   background: #003d5d;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
-  background-color: #fff;
   padding: 20px;
-  color: gray;
-  text-align: left;
+  color: #fff;
 }
 
 @keyframes App-logo-spin {
@@ -26,6 +20,7 @@ body {
 .navBar {
   margin: 2em 0;
 }
+
 .playListForm {
   text-align: left;
 }
@@ -38,6 +33,6 @@ li {
   text-align: left;
 }
 
-ul {
-  padding-left: 0;
+.playListItem {
+  margin: 1em 0;
 }

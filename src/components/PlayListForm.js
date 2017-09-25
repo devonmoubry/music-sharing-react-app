@@ -17,7 +17,7 @@ export default class PlayListForm extends Component {
     e.preventDefault();
     console.log(e.target);
     this.setState({ [e.target.id]: e.target.value });
-  }
+  };
 
   addToList = e => {
     e.preventDefault();
@@ -47,8 +47,7 @@ export default class PlayListForm extends Component {
       userName: "",
       songNote: "",
       songArtist: "",
-      songTitle: "",
-      songs: []
+      songTitle: ""
     });
   };
 

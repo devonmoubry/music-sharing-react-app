@@ -16,6 +16,9 @@ export default class PlayList extends Component {
       .then(data => {
         this.setState({ songs: data });
         console.log("state", this.state.songs);
+      })
+      .catch(error => {
+        console.log("poop", error);
       });
   }
 
@@ -34,7 +37,7 @@ export default class PlayList extends Component {
     let playListItemArray = this.state.songs;
     let songs = playListItemArray.map(song => {
       return (
-        <div key={song.songTitle} className="card playListItem">
+        <div key={song._id} className="card playListItem">
           <PlayListItem song={song} />
         </div>
       );
